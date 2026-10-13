@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5f2" />
+  <meta name="description" content="A thoughtful workspace for exploring CSVs with an AI data analyst." />
+  <title>Pivot — your data, understood</title>
+  <link rel="icon" type="image/png" href="pivot-mark-cropped.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="integration.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Pivot home"><span class="brand-mark"><i></i><i></i><i></i></span><span>pivot<span class="brand-period">.</span></span></a>
+      <button class="workspace-switch"><span class="workspace-avatar">P</span><span class="workspace-copy"><b>Pivot workspace</b><small>Local app</small></span><span class="chevron">⌄</span></button>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span class="nav-icon">▦</span> Overview <span class="nav-dot"></span></a>
+        <a class="nav-item" href="#datasets"><span class="nav-icon">▤</span> Dataset</a>
+        <a class="nav-item" href="#reports"><span class="nav-icon">◷</span> Reports</a>
+      </nav>
+      <div class="side-label recent-label">RECENT ANALYSES <button class="tiny-plus" title="New analysis">+</button></div>
+      <div class="recent-list">
+        <p class="empty-recents">Your recent analyses will appear here.</p>
+      </div>
+      <div class="sidebar-bottom"><div class="tip-card" id="privacy"><div class="tip-icon">✳</div><b>Know before you upload.</b><p>Only sample or explicitly public CSVs are accepted. Private data is blocked before analysis.</p><a href="#upload-zone">Review upload options <span>↗</span></a></div><button class="profile"><span class="profile-avatar">P</span><span><b>Local analyst</b><small>Private workspace</small></span></button></div>
+    </aside>
+
+    <main class="main-area" id="overview">
+      <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span class="slash">/</span><b>Overview</b></div><div class="top-actions"><span class="saved-status"><i></i> Local analysis</span><button class="theme-toggle" id="theme-toggle" type="button"></button><button class="help-button">? <span>Help</span></button></div></header>
+      <div class="content">
+        <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR ANALYTICS STUDIO</div><h1>Make sense of your data <span class="wave">✳</span></h1><p class="subtitle">Upload an approved CSV to explore the whole dataset with your analyst.</p></div><a class="date-button" href="#privacy">Data boundary <span>↗</span></a></section>
+
+        <section class="upload-banner" id="upload-zone" aria-label="Upload a CSV file"><div class="upload-art"><div class="art-sheet sheet-back"></div><div class="art-sheet sheet-front"><span class="sheet-top"></span><span></span><span></span><span></span></div><div class="art-sparkle">✳</div><div class="art-orbit"></div></div><div class="upload-copy"><div class="upload-kicker"><span class="live-dot"></span> READY FOR YOUR NEXT QUESTION</div><h2>Bring your data to life.</h2><p>Run EDA, discover useful charts, and get a cleaned copy with an audit trail.</p><div class="upload-controls"><button class="primary-button" id="browse-btn"><span>↑</span> Upload a CSV</button><button class="secondary-button" id="sample-btn" type="button">Try the included sample</button><span class="upload-meta">Up to 25 MB <span>·</span> Sample or public data only</span></div><label class="classification-confirm"><span>Data classification</span><select id="data-classification"><option value="" selected>Choose before upload…</option><option value="sample">Sample or synthetic data</option><option value="public">Explicitly public data</option><option value="private">Private / confidential (blocked)</option></select><small>Groq handles analysis on the host; deterministic chart rendering runs in an isolated local Docker container. LangSmith tracing is optional.</small></label></div><input id="file-input" type="file" accept=".csv,text/csv" hidden /></section>
+
+        <section class="analysis-progress" id="analysis-progress" aria-live="polite" hidden></section>
+        <section class="dataset-heading" id="datasets"><div class="dataset-title"><span class="dataset-glyph">▤</span><div><h2 id="dataset-name">No dataset analyzed</h2><div class="dataset-meta"><span class="status-pill"><i></i> WAITING</span><span>—</span><span>·</span><span id="row-count">— rows</span><span>·</span><span id="dataset-updated">Upload a sample/public CSV to begin</span></div></div></div><div class="dataset-actions"><button class="secondary-button" id="ask-btn" disabled><span>✳</span> Ask your data</button></div></section>
+
+        <section class="metrics-grid" aria-label="Key metrics">
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">ROWS ANALYZED</span><span class="metric-symbol revenue">↗</span></div><div class="metric-value" id="metric-rows">—</div><div class="metric-foot">Full dataset</div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">COLUMNS</span><span class="metric-symbol orders">⌑</span></div><div class="metric-value" id="metric-columns">—</div><div class="metric-foot">Profiled by the agent</div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">MISSING VALUES</span><span class="metric-symbol aov">◇</span></div><div class="metric-value" id="metric-missing">—</div><div class="metric-foot">Before transformations</div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">DUPLICATE ROWS</span><span class="metric-symbol customers">↺</span></div><div class="metric-value" id="metric-duplicates">—</div><div class="metric-foot">Detected in uploaded CSV</div></article>
+        </section>
+
+        <section class="panel plotly-dashboard-panel" id="plotly-dashboard-panel" hidden><div class="plotly-panel-heading"><div><div class="panel-kicker">FULL DATASET · INTERACTIVE</div><h3>Analysis dashboard</h3></div><span class="connected-pill"><i></i> Dashboard ready</span></div><iframe id="plotly-frame" title="Interactive dataset analysis dashboard"></iframe></section>
+        <section class="panel artifact-panel" id="artifact-downloads"><div class="panel-heading"><div><div class="panel-kicker">YOUR FILES</div><h3>Analysis artifacts</h3></div><button class="text-action" id="download-report">Download report</button></div><p id="artifact-empty">Your report, cleaned data, profile, and chart downloads will appear after analysis.</p><div class="artifact-links" id="artifact-links"></div></section>
+
+
+
+        <footer class="page-footer"><span>Waiting for your first dataset <b>—</b></span><span>Made for curious minds <span class="footer-spark">✳</span></span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="chat-modal" aria-hidden="true"><section class="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-title"><div class="chat-header"><div><span class="chat-spark">✳</span><div><div class="panel-kicker">YOUR DATA ANALYST</div><h2 id="chat-title">Ask anything.</h2></div></div><button class="close-modal" id="close-chat" aria-label="Close">×</button></div><div class="chat-body" id="chat-body"><div class="assistant-message"><span class="mini-spark">✳</span><div><b>Ask questions grounded in your analysis.</b><p>Upload a sample or explicitly public CSV first. The agent can refer to the full dataset profile and generated artifacts.</p></div></div><div class="suggestions"><button data-question="Summarize the most important patterns in this dataset.">Summarize the key patterns</button><button data-question="Which columns have the most missing values, and what did you do about them?">Explain data quality</button><button data-question="What charts would help me understand this dataset?">Suggest useful charts</button></div></div><form class="chat-input-row" id="chat-form"><input id="chat-input" placeholder="Ask a question about your data..." autocomplete="off"/><button aria-label="Send question">↑</button></form><div class="chat-disclaimer">AI responses can be wrong; compare important claims with the downloadable profile and report.</div></section></div>
+  <script src="app.js"></script>
+  <script src="config.js"></script>
+  <script src="workflow.js"></script>
+</body>
+</html>

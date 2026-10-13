@@ -1,0 +1,28 @@
+{
+  "charts": [
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_01_histogram.svg",
+      "question": "What is the distribution of unit_price after capping outliers?",
+      "reason": "Assess effect of outlier handling on price distribution."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_02_box.svg",
+      "question": "Are there any remaining outliers in units_sold?",
+      "reason": "Validate that units_sold has no extreme values."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_03_bar.svg",
+      "question": "How many orders are in each region?",
+      "reason": "Understand regional order volume."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_04_scatter.svg",
+      "question": "Is there a relationship between units sold and unit price?",
+      "reason": "Explore potential correlation between quantity and price."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "chart_type": "histogram",
+    "columns": [
+      "age"
+    ],
+    "question": "What is the distribution of ages after imputation?",
+    "reason": "Shows age spread and confirms imputation effect."
+  },
+  {
+    "chart_type": "box",
+    "columns": [
+      "salary"
+    ],
+    "question": "Are there any salary outliers?",
+    "reason": "Box plot visualizes salary range and potential outliers."
+  },
+  {
+    "chart_type": "bar",
+    "columns": [
+      "city"
+    ],
+    "question": "How many records per city after imputation?",
+    "reason": "Bar chart reveals city frequency distribution."
+  },
+  {
+    "chart_type": "scatter",
+    "columns": [
+      "age",
+      "salary"
+    ],
+    "question": "Is there a relationship between age and salary?",
+    "reason": "Scatter plot can indicate correlation between age and salary."
+  }
+]

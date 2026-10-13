@@ -1,0 +1,408 @@
+{
+  "before": {
+    "row_count": 31,
+    "column_count": 8,
+    "duplicate_row_count": 1,
+    "columns": {
+      "order_id": {
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 30,
+        "unique_percent": 96.7741935483871,
+        "likely_identifier": true,
+        "identifier_reason": "column name suggests an identifier",
+        "inferred_type": "categorical",
+        "mode": "ORD-1012",
+        "mode_frequency": 2,
+        "top_frequencies": [
+          {
+            "value": "ORD-1012",
+            "count": 2
+          },
+          {
+            "value": "ORD-1001",
+            "count": 1
+          },
+          {
+            "value": "ORD-1017",
+            "count": 1
+          },
+          {
+            "value": "ORD-1029",
+            "count": 1
+          },
+          {
+            "value": "ORD-1028",
+            "count": 1
+          }
+        ]
+      },
+      "order_date": {
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 30,
+        "unique_percent": 96.7741935483871,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "2026-01-14",
+        "mode_frequency": 2,
+        "top_frequencies": [
+          {
+            "value": "2026-01-14",
+            "count": 2
+          },
+          {
+            "value": "2026-01-03",
+            "count": 1
+          },
+          {
+            "value": "2026-01-19",
+            "count": 1
+          },
+          {
+            "value": "2026-01-31",
+            "count": 1
+          },
+          {
+            "value": "2026-01-30",
+            "count": 1
+          }
+        ]
+      },
+      "region": {
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 4,
+        "unique_percent": 12.903225806451612,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "North",
+        "mode_frequency": 8,
+        "top_frequencies": [
+          {
+            "value": "North",
+            "count": 8
+          },
+          {
+            "value": "South",
+            "count": 8
+          },
+          {
+            "value": "West",
+            "count": 8
+          },
+          {
+            "value": "East",
+            "count": 7
+          }
+        ]
+      },
+      "product_category": {
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 3,
+        "unique_percent": 9.67741935483871,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Home",
+        "mode_frequency": 11,
+        "top_frequencies": [
+          {
+            "value": "Home",
+            "count": 11
+          },
+          {
+            "value": "Books",
+            "count": 10
+          },
+          {
+            "value": "Electronics",
+            "count": 10
+          }
+        ]
+      },
+      "units_sold": {
+        "dtype": "float64",
+        "missing_count": 1,
+        "missing_percent": 3.225806451612903,
+        "unique_count": 6,
+        "unique_percent": 20.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 2.5,
+        "median": 2.0,
+        "minimum": 1.0,
+        "q1": 1.0,
+        "q3": 3.0,
+        "maximum": 6.0,
+        "skew": 0.9261214946444769,
+        "iqr_outlier_count": 0
+      },
+      "unit_price": {
+        "dtype": "float64",
+        "missing_count": 1,
+        "missing_percent": 3.225806451612903,
+        "unique_count": 28,
+        "unique_percent": 93.33333333333333,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 616.3323333333334,
+        "median": 40.25,
+        "minimum": 11.5,
+        "q1": 17.4375,
+        "q3": 736.5,
+        "maximum": 9500.0,
+        "skew": 4.923174049141934,
+        "iqr_outlier_count": 1
+      },
+      "customer_segment": {
+        "dtype": "object",
+        "missing_count": 1,
+        "missing_percent": 3.225806451612903,
+        "unique_count": 3,
+        "unique_percent": 10.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Consumer",
+        "mode_frequency": 15,
+        "top_frequencies": [
+          {
+            "value": "Consumer",
+            "count": 15
+          },
+          {
+            "value": "Corporate",
+            "count": 8
+          },
+          {
+            "value": "Small Business",
+            "count": 7
+          }
+        ]
+      },
+      "returned": {
+        "dtype": "object",
+        "missing_count": 1,
+        "missing_percent": 3.225806451612903,
+        "unique_count": 2,
+        "unique_percent": 6.666666666666667,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 0.13333333333333333,
+        "median": 0.0,
+        "minimum": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "maximum": 1.0,
+        "skew": 2.2725194353376694,
+        "iqr_outlier_count": 4
+      }
+    }
+  },
+  "after": {
+    "row_count": 30,
+    "column_count": 8,
+    "duplicate_row_count": 0,
+    "columns": {
+      "order_id": {
+        "dtype": "string",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 30,
+        "unique_percent": 100.0,
+        "likely_identifier": true,
+        "identifier_reason": "column name suggests an identifier",
+        "inferred_type": "categorical",
+        "mode": "ORD-1001",
+        "mode_frequency": 1,
+        "top_frequencies": [
+          {
+            "value": "ORD-1001",
+            "count": 1
+          },
+          {
+            "value": "ORD-1002",
+            "count": 1
+          },
+          {
+            "value": "ORD-1003",
+            "count": 1
+          },
+          {
+            "value": "ORD-1004",
+            "count": 1
+          },
+          {
+            "value": "ORD-1005",
+            "count": 1
+          }
+        ]
+      },
+      "order_date": {
+        "dtype": "datetime64[ns]",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 30,
+        "unique_percent": 100.0,
+        "likely_identifier": true,
+        "identifier_reason": "all observed values are unique and monotonic",
+        "inferred_type": "numeric",
+        "mean": 1.7686512e+18,
+        "median": 1.7686512e+18,
+        "minimum": 1.7673984e+18,
+        "q1": 1.7680248e+18,
+        "q3": 1.7692776e+18,
+        "maximum": 1.769904e+18,
+        "skew": 7.982377713671142e-17,
+        "iqr_outlier_count": 0
+      },
+      "region": {
+        "dtype": "category",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 4,
+        "unique_percent": 13.333333333333334,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "North",
+        "mode_frequency": 8,
+        "top_frequencies": [
+          {
+            "value": "North",
+            "count": 8
+          },
+          {
+            "value": "South",
+            "count": 8
+          },
+          {
+            "value": "East",
+            "count": 7
+          },
+          {
+            "value": "West",
+            "count": 7
+          }
+        ]
+      },
+      "product_category": {
+        "dtype": "category",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 3,
+        "unique_percent": 10.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Books",
+        "mode_frequency": 10,
+        "top_frequencies": [
+          {
+            "value": "Books",
+            "count": 10
+          },
+          {
+            "value": "Electronics",
+            "count": 10
+          },
+          {
+            "value": "Home",
+            "count": 10
+          }
+        ]
+      },
+      "units_sold": {
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 6,
+        "unique_percent": 20.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 2.3666666666666667,
+        "median": 2.0,
+        "minimum": 1.0,
+        "q1": 1.0,
+        "q3": 3.0,
+        "maximum": 6.0,
+        "skew": 0.9777029624282364,
+        "iqr_outlier_count": 0
+      },
+      "unit_price": {
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 29,
+        "unique_percent": 96.66666666666667,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 359.5010833333333,
+        "median": 40.625,
+        "minimum": 11.5,
+        "q1": 17.4375,
+        "q3": 736.5,
+        "maximum": 1783.5625,
+        "skew": 1.4183551085366024,
+        "iqr_outlier_count": 0
+      },
+      "customer_segment": {
+        "dtype": "category",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 3,
+        "unique_percent": 10.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Consumer",
+        "mode_frequency": 15,
+        "top_frequencies": [
+          {
+            "value": "Consumer",
+            "count": 15
+          },
+          {
+            "value": "Corporate",
+            "count": 8
+          },
+          {
+            "value": "Small Business",
+            "count": 7
+          }
+        ]
+      },
+      "returned": {
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 2,
+        "unique_percent": 6.666666666666667,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 0.13333333333333333,
+        "median": 0.0,
+        "minimum": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "maximum": 1.0,
+        "skew": 2.2725194353376694,
+        "iqr_outlier_count": 4
+      }
+    }
+  }
+}

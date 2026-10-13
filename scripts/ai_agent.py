@@ -19,7 +19,7 @@ class AgentConfig:
 
     name: str = "data-agent"
     model_backend: Literal["groq"] = "groq"
-    model_name: str = "llama-3.1-8b-instant"
+    model_name: str = "openai/gpt-oss-20b"
 
     @property
     def model_spec(self) -> str:

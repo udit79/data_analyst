@@ -1,0 +1,32 @@
+order_id,order_date,region,product_category,units_sold,unit_price,customer_segment,returned
+ORD-1001,2026-01-03,North,Books,2,14.99,Consumer,false
+ORD-1002,2026-01-04,South,Electronics,1,799.00,Corporate,false
+ORD-1003,2026-01-05,East,Home,3,39.50,Consumer,false
+ORD-1004,2026-01-06,West,Books,5,12.00,Small Business,true
+ORD-1005,2026-01-07,North,Electronics,1,1299.00,Consumer,false
+ORD-1006,2026-01-08,South,Home,2,54.25,Corporate,false
+ORD-1007,2026-01-09,East,Books,,16.50,Consumer,false
+ORD-1008,2026-01-10,West,Electronics,2,649.99,Small Business,false
+ORD-1009,2026-01-11,North,Home,4,32.00,Consumer,true
+ORD-1010,2026-01-12,South,Books,3,,Corporate,false
+ORD-1011,2026-01-13,East,Electronics,1,899.00,Small Business,false
+ORD-1012,2026-01-14,West,Home,6,28.75,Consumer,false
+ORD-1013,2026-01-15,North,Books,2,14.99,Consumer,false
+ORD-1014,2026-01-16,South,Electronics,1,749.00,,true
+ORD-1015,2026-01-17,East,Home,2,62.00,Corporate,false
+ORD-1016,2026-01-18,West,Books,4,11.50,Small Business,false
+ORD-1017,2026-01-19,North,Electronics,1,1599.00,Consumer,false
+ORD-1018,2026-01-20,South,Home,3,45.00,Corporate,false
+ORD-1019,2026-01-21,East,Books,2,18.00,Consumer,
+ORD-1020,2026-01-22,West,Electronics,1,699.00,Small Business,false
+ORD-1021,2026-01-23,North,Home,5,35.00,Consumer,false
+ORD-1022,2026-01-24,South,Books,3,13.25,Corporate,true
+ORD-1023,2026-01-25,East,Electronics,1,829.00,Small Business,false
+ORD-1024,2026-01-26,West,Home,2,49.00,Consumer,false
+ORD-1025,2026-01-27,North,Books,1,15.75,Corporate,false
+ORD-1026,2026-01-28,South,Electronics,1,879.00,Consumer,false
+ORD-1027,2026-01-29,East,Home,4,38.50,Small Business,false
+ORD-1028,2026-01-30,West,Books,2,17.25,Consumer,false
+ORD-1029,2026-01-31,North,Electronics,1,9500.00,Corporate,false
+ORD-1030,2026-02-01,South,Home,3,41.00,Consumer,false
+ORD-1012,2026-01-14,West,Home,6,28.75,Consumer,false

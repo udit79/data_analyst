@@ -1,0 +1,91 @@
+{
+  "input_rows": 31,
+  "output_rows": 30,
+  "findings": [
+    "order_id is a unique identifier with 1 duplicate row; should be removed to avoid redundancy.",
+    "order_date is stored as object; should be converted to datetime for time analysis.",
+    "region, product_category, customer_segment are categorical strings; keep as category.",
+    "units_sold has 1 missing value; impute with median (2.0) to preserve distribution.",
+    "unit_price has 1 missing and 1 outlier (9500); impute missing with median (40.25) and cap outlier using IQR.",
+    "returned is object but numeric boolean; convert to numeric (0/1) and impute missing with mode (0)."
+  ],
+  "column_transformations": [
+    {
+      "column": "order_date",
+      "reason": "Enable date-based analysis and ordering.",
+      "conversion": "datetime",
+      "missing_values": "keep",
+      "outliers": "keep",
+      "rows_with_missing_before": 0,
+      "rows_with_missing_after": 0,
+      "rows_removed": 0
+    },
+    {
+      "column": "returned",
+      "reason": "Boolean stored as object; convert to 0/1 and fill missing with most common (0).",
+      "conversion": "numeric",
+      "missing_values": "mode",
+      "outliers": "keep",
+      "rows_with_missing_before": 1,
+      "rows_with_missing_after": 0,
+      "rows_removed": 0
+    },
+    {
+      "column": "unit_price",
+      "reason": "Impute missing with median; cap extreme high price (9500) to reduce skew.",
+      "conversion": null,
+      "missing_values": "median",
+      "outliers": "cap_iqr",
+      "rows_with_missing_before": 1,
+      "rows_with_missing_after": 0,
+      "rows_removed": 0
+    },
+    {
+      "column": "units_sold",
+      "reason": "Only 1 missing; median preserves central tendency.",
+      "conversion": null,
+      "missing_values": "median",
+      "outliers": "keep",
+      "rows_with_missing_before": 1,
+      "rows_with_missing_after": 0,
+      "rows_removed": 0
+    }
+  ],
+  "duplicate_rows_removed": 1,
+  "duplicate_reason": "Exact duplicate rows provide no additional information and inflate row count.",
+  "chart_requests": [
+    {
+      "chart_type": "histogram",
+      "columns": [
+        "unit_price"
+      ],
+      "question": "What is the distribution of unit_price after capping outliers?",
+      "reason": "Assess effect of outlier handling on price distribution."
+    },
+    {
+      "chart_type": "box",
+      "columns": [
+        "units_sold"
+      ],
+      "question": "Are there any remaining outliers in units_sold?",
+      "reason": "Validate that units_sold has no extreme values."
+    },
+    {
+      "chart_type": "bar",
+      "columns": [
+        "region"
+      ],
+      "question": "How many orders are in each region?",
+      "reason": "Understand regional order volume."
+    },
+    {
+      "chart_type": "scatter",
+      "columns": [
+        "units_sold",
+        "unit_price"
+      ],
+      "question": "Is there a relationship between units sold and unit price?",
+      "reason": "Explore potential correlation between quantity and price."
+    }
+  ]
+}

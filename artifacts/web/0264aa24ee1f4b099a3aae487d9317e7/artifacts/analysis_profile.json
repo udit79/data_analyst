@@ -1,0 +1,252 @@
+{
+  "before": {
+    "row_count": 5,
+    "column_count": 5,
+    "duplicate_row_count": 0,
+    "columns": {
+      "id": {
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": true,
+        "identifier_reason": "column name suggests an identifier",
+        "inferred_type": "numeric",
+        "mean": 3.0,
+        "median": 3.0,
+        "minimum": 1.0,
+        "q1": 2.0,
+        "q3": 4.0,
+        "maximum": 5.0,
+        "skew": 0.0,
+        "iqr_outlier_count": 0
+      },
+      "name": {
+        "dtype": "object",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Alice",
+        "mode_frequency": 1,
+        "top_frequencies": [
+          {
+            "value": "Alice",
+            "count": 1
+          },
+          {
+            "value": "Bob",
+            "count": 1
+          },
+          {
+            "value": "Charlie",
+            "count": 1
+          },
+          {
+            "value": "David",
+            "count": 1
+          },
+          {
+            "value": "Eve",
+            "count": 1
+          }
+        ]
+      },
+      "age": {
+        "dtype": "float64",
+        "missing_count": 1,
+        "missing_percent": 20.0,
+        "unique_count": 4,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 32.5,
+        "median": 32.5,
+        "minimum": 25.0,
+        "q1": 28.75,
+        "q3": 36.25,
+        "maximum": 40.0,
+        "skew": 0.0,
+        "iqr_outlier_count": 0
+      },
+      "city": {
+        "dtype": "object",
+        "missing_count": 1,
+        "missing_percent": 20.0,
+        "unique_count": 4,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Chicago",
+        "mode_frequency": 1,
+        "top_frequencies": [
+          {
+            "value": "New York",
+            "count": 1
+          },
+          {
+            "value": "Los Angeles",
+            "count": 1
+          },
+          {
+            "value": "Chicago",
+            "count": 1
+          },
+          {
+            "value": "Houston",
+            "count": 1
+          }
+        ]
+      },
+      "salary": {
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 70000.0,
+        "median": 70000.0,
+        "minimum": 50000.0,
+        "q1": 60000.0,
+        "q3": 80000.0,
+        "maximum": 90000.0,
+        "skew": 0.0,
+        "iqr_outlier_count": 0
+      }
+    }
+  },
+  "after": {
+    "row_count": 5,
+    "column_count": 5,
+    "duplicate_row_count": 0,
+    "columns": {
+      "id": {
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": true,
+        "identifier_reason": "column name suggests an identifier",
+        "inferred_type": "numeric",
+        "mean": 3.0,
+        "median": 3.0,
+        "minimum": 1.0,
+        "q1": 2.0,
+        "q3": 4.0,
+        "maximum": 5.0,
+        "skew": 0.0,
+        "iqr_outlier_count": 0
+      },
+      "name": {
+        "dtype": "category",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Alice",
+        "mode_frequency": 1,
+        "top_frequencies": [
+          {
+            "value": "Alice",
+            "count": 1
+          },
+          {
+            "value": "Bob",
+            "count": 1
+          },
+          {
+            "value": "Charlie",
+            "count": 1
+          },
+          {
+            "value": "David",
+            "count": 1
+          },
+          {
+            "value": "Eve",
+            "count": 1
+          }
+        ]
+      },
+      "age": {
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 32.5,
+        "median": 32.5,
+        "minimum": 25.0,
+        "q1": 30.0,
+        "q3": 35.0,
+        "maximum": 40.0,
+        "skew": 0.0,
+        "iqr_outlier_count": 0
+      },
+      "city": {
+        "dtype": "category",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 4,
+        "unique_percent": 80.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "categorical",
+        "mode": "Chicago",
+        "mode_frequency": 2,
+        "top_frequencies": [
+          {
+            "value": "Chicago",
+            "count": 2
+          },
+          {
+            "value": "Houston",
+            "count": 1
+          },
+          {
+            "value": "Los Angeles",
+            "count": 1
+          },
+          {
+            "value": "New York",
+            "count": 1
+          }
+        ]
+      },
+      "salary": {
+        "dtype": "int64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_count": 5,
+        "unique_percent": 100.0,
+        "likely_identifier": false,
+        "identifier_reason": null,
+        "inferred_type": "numeric",
+        "mean": 70000.0,
+        "median": 70000.0,
+        "minimum": 50000.0,
+        "q1": 60000.0,
+        "q3": 80000.0,
+        "maximum": 90000.0,
+        "skew": 0.0,
+        "iqr_outlier_count": 0
+      }
+    }
+  }
+}

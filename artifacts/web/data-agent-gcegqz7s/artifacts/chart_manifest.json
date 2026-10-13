@@ -1,0 +1,28 @@
+{
+  "charts": [
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_01_histogram.svg",
+      "question": "What is the distribution of ages after imputation?",
+      "reason": "Shows age spread and confirms imputation effect."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_02_box.svg",
+      "question": "Are there any salary outliers?",
+      "reason": "Box plot visualizes salary range and potential outliers."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_03_bar.svg",
+      "question": "How many records per city after imputation?",
+      "reason": "Bar chart reveals city frequency distribution."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_04_scatter.svg",
+      "question": "Is there a relationship between age and salary?",
+      "reason": "Scatter plot can indicate correlation between age and salary."
+    }
+  ]
+}

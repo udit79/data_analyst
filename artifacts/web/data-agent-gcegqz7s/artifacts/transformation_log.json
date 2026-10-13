@@ -1,0 +1,69 @@
+{
+  "input_rows": 5,
+  "output_rows": 5,
+  "findings": [
+    "Column 'age' has 20% missing values; median is 32.5.",
+    "Column 'city' has 20% missing values; mode is 'Chicago'.",
+    "No duplicate rows detected.",
+    "No numeric outliers detected in any column."
+  ],
+  "column_transformations": [
+    {
+      "column": "age",
+      "reason": "Impute missing ages with median to preserve distribution.",
+      "conversion": null,
+      "missing_values": "median",
+      "outliers": "keep",
+      "rows_with_missing_before": 1,
+      "rows_with_missing_after": 0,
+      "rows_removed": 0
+    },
+    {
+      "column": "city",
+      "reason": "Impute missing city with most frequent value to avoid bias.",
+      "conversion": null,
+      "missing_values": "mode",
+      "outliers": "keep",
+      "rows_with_missing_before": 1,
+      "rows_with_missing_after": 0,
+      "rows_removed": 0
+    }
+  ],
+  "duplicate_rows_removed": 0,
+  "duplicate_reason": "No duplicate rows based on all columns.",
+  "chart_requests": [
+    {
+      "chart_type": "histogram",
+      "columns": [
+        "age"
+      ],
+      "question": "What is the distribution of ages after imputation?",
+      "reason": "Shows age spread and confirms imputation effect."
+    },
+    {
+      "chart_type": "box",
+      "columns": [
+        "salary"
+      ],
+      "question": "Are there any salary outliers?",
+      "reason": "Box plot visualizes salary range and potential outliers."
+    },
+    {
+      "chart_type": "bar",
+      "columns": [
+        "city"
+      ],
+      "question": "How many records per city after imputation?",
+      "reason": "Bar chart reveals city frequency distribution."
+    },
+    {
+      "chart_type": "scatter",
+      "columns": [
+        "age",
+        "salary"
+      ],
+      "question": "Is there a relationship between age and salary?",
+      "reason": "Scatter plot can indicate correlation between age and salary."
+    }
+  ]
+}

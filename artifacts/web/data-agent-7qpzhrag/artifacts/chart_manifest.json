@@ -1,0 +1,28 @@
+{
+  "charts": [
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_01_histogram.svg",
+      "question": "What is the distribution of unit_price after handling outliers?",
+      "reason": "Histogram reveals price spread and effect of capping outliers."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_02_box.svg",
+      "question": "Are there remaining extreme unit_price values after capping?",
+      "reason": "Box plot visualizes residual outliers and spread."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_03_bar.svg",
+      "question": "How many orders belong to each product category?",
+      "reason": "Bar chart shows category frequency for sales composition."
+    },
+    {
+      "status": "generated",
+      "path": "/workspace/artifacts/charts/chart_04_scatter.svg",
+      "question": "Is there a relationship between units sold and unit price?",
+      "reason": "Scatter plot explores correlation between quantity and price."
+    }
+  ]
+}

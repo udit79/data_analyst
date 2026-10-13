@@ -1,0 +1,35 @@
+[
+  {
+    "chart_type": "histogram",
+    "columns": [
+      "salary"
+    ],
+    "question": "What is the distribution of employee salaries?",
+    "reason": "Histogram shows salary spread and central tendency."
+  },
+  {
+    "chart_type": "box",
+    "columns": [
+      "age"
+    ],
+    "question": "Are there any age outliers after imputation?",
+    "reason": "Box plot visualizes age distribution and potential outliers."
+  },
+  {
+    "chart_type": "bar",
+    "columns": [
+      "city"
+    ],
+    "question": "How many employees are in each city?",
+    "reason": "Bar chart displays count per city, useful after imputing missing city."
+  },
+  {
+    "chart_type": "scatter",
+    "columns": [
+      "age",
+      "salary"
+    ],
+    "question": "Is there a relationship between age and salary?",
+    "reason": "Scatter plot can reveal correlation between age and salary."
+  }
+]
