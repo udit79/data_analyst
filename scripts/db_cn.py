@@ -1,6 +1,8 @@
-import psycopg2
 import os
+
+import psycopg2
 from dotenv import load_dotenv
+
 load_dotenv()
 DB_Host="localhost"
 DB_Port="5432"
@@ -25,5 +27,5 @@ try:
     cursor.close()
     connection.close()
     print("Test successful Db connection closed")
-except Exception as e:
+except psycopg2.Error:
     print("Something went worng.connection failed")

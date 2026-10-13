@@ -20,3 +20,22 @@ dependencies = [
     "streamlit==1.30.0",
     "uvicorn==0.27.0",
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/__init__.py" = ["N999"]
+
+[tool.pyright]
+pythonVersion = "3.11"
+pythonPlatform = "Windows"
+typeCheckingMode = "basic"
+venvPath = "."
+venv = ".venv"
+include = ["scripts", "sandbox", "agent.py", "tests"]
+
+[dependency-groups]
+dev = [
+    "langgraph-sdk>=0.4.6,<0.5.0",
+    "managed-deepagents>=0.9.0,<1.0.0",
+    "pyright>=1.1.414",
+    "pytest>=9,<10",
+]
