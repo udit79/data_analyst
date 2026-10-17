@@ -3,15 +3,9 @@
 Pivot analyzes approved CSV data: a Groq-backed agent plans exploratory analysis and justified transformations, while a local isolated renderer creates a dashboard and downloadable artifacts.
 
 ## Demo
-
-[Demo recording](<Recording 2026-10-13 200235.mp4>)
-
-No live demo URL or slide link was supplied in the task context.
+https://github.com/user-attachments/assets/427410c4-c9ca-4b24-ad03-f8dd73d11193
 
 ## Problem and solution
-
-The contest name, problem ID, and official problem statement were not provided. This project addresses a practical task for analysts: understanding a CSV’s quality and structure before relying on it for further analysis.
-
 Pivot profiles columns, missing values, duplicates, and numeric distributions; asks an agent to propose allowed transformations and useful charts; then saves a dashboard, report, transformed CSV, profile, and transformation log. It does not train a model.
 
 ## Key features
@@ -172,7 +166,7 @@ The CLI also accepts `--source database --query "..."` or `--source api --api-ur
 │   ├── requirements.txt            Renderer dependencies
 │   ├── setup.sh                    Managed sandbox setup script
 │   └── __init__.py                 Managed sandbox declaration
-├── Design a polished CSV analytics frontend for a Python data analyst agent/
+├── frontend/
 │   ├── index.html                  Pivot application page
 │   ├── app.js and workflow.js      Browser interactions and API workflow
 │   ├── styles.css                  Interface styles
@@ -183,16 +177,3 @@ The CLI also accepts `--source database --query "..."` or `--source api --api-ur
 └── artifacts/                      Local analysis outputs and logs
 ```
 
-## Status and limitations
-
-- The local web app supports CSV uploads only. Its API limits uploads to 25 MB.
-- The CLI includes sample CSV, database, and API ingestion paths; database and API paths require their source credentials and an available Managed Deep Agent deployment.
-- Only sample or explicitly public data may be sent for hosted analysis. Private and unknown classifications are rejected.
-- The agent proposes and applies EDA transformations; model training and train/test splitting are not implemented.
-- Local analysis sessions are held in memory. Restarting the API clears follow-up sessions and the active analysis list.
-- Dashboard chart requests are capped at four; excess requests are recorded as omitted by the plan executor.
-- Test files exist in the working directory but `tests/` is excluded by `.gitignore`, so those files are not included in a Git checkout.
-
-## Team, license, and acknowledgements
-
-No team members, license, or formal acknowledgements are specified in the repository. No license file is present.
