@@ -6,3 +6,4 @@ __pycache__/
 .pytest-temp-db/
 .pytest-tmp/
 .pytest-tmp-plan/
+artifacts/
